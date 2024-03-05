@@ -1,0 +1,7 @@
+<div class="player-contain">
+    <div *ngFor="let player of game.players; let i = index;"
+        class="player" [class.player-active]="i == game.currentPlayer">
+        <img src="./../../assets/img/players/guest-{{ i }}.png" alt="">
+        <span>{{ player }}</span>
+    </div>
+</div>

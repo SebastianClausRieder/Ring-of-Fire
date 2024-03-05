@@ -1,0 +1,27 @@
+@import './../../mixin.scss';
+
+.player-contain {
+
+    @include display($gap: 25px);
+    position: absolute;
+    left: 0; right: 0; top: 25px;
+    .player {
+        width: 100px;
+        height: 100px;
+
+        @include display($fd: column, $gap: 8px);
+
+        img {
+            width: 62px;
+        }
+
+        span {
+            font-size: 15px;
+            font-weight: 700;
+        }
+    }
+}
+
+.player-active {
+    transform: scale(1.1) translateY(25px) !important;
+}

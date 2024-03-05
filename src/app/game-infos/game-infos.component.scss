@@ -1,0 +1,20 @@
+@import './../../mixin.scss';
+
+.card-contain {
+    height: fit-content;
+    @include display($fd: column, $ai: flex-start);
+    background-color: #b4956b;
+    padding: 10px;
+
+    .card-title {
+        font-size: 25px;
+        font-weight: 600;
+        color: #8c632d;
+    }
+
+    .card-content {
+        font-size: 18px;
+        font-weight: 400;
+        color: #8c632d;
+    }
+}

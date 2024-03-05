@@ -1,0 +1,7 @@
+@mixin display($d: flex, $fd: row, $jc: center, $ai: center, $gap: 0) {
+    display: $d;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $gap;
+}

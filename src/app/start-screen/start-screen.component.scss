@@ -1,0 +1,39 @@
+@import './../../mixin.scss';
+
+.start-screen {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    @include display();
+}
+
+.start-img-contain {
+    width: fit-content;
+    height: fit-content;
+
+    @include display();
+    position: relative;
+
+    img {
+        width: auto;
+        height: 55vh;
+    }
+}
+
+.btn-box {
+
+    @include display();
+    position: absolute;
+    left: 0; right: 0; bottom: 18%;
+
+    img {
+        width: 25%;
+        height: auto;
+        
+        cursor: pointer;
+
+        &:hover {
+            filter: brightness(1.5);
+        }
+    }
+}
