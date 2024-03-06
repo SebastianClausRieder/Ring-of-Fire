@@ -4,18 +4,18 @@
     <div class="card-stack">
         <!-- unplayed Card Stack -->
         <img [ngStyle]="{'right.px': i * 15}" *ngFor="let c of [0, 1, 2, 3]; let i = index;"
-            src="./../../assets/img/cards/card_cover.png" alt="">
+            src="assets/img/cards/card_cover.png" alt="">
 
         <img (click)="pickCard()" class="top-card" style="right: 60px;"
-            src="./../../assets/img/cards/card_cover.png" alt="">
+            src="assets/img/cards/card_cover.png" alt="">
 
         <!-- Stack of Played Cards -->
         <img *ngFor="let lastPickedCard of game.playedCards; let i = index" [ngStyle]="{'transform': 'rotate(' + (i % 4) * 5 + 'deg)'}" class="last-picked-card" style="right: 250px;"
-            src="./../../assets/img/cards/{{ lastPickedCard }}.png" alt="">
+            src="assets/img/cards/{{ lastPickedCard }}.png" alt="">
 
         <!-- Current Card (Animation) -->
         <img (click)="pickCard()" *ngIf="pickCardAnimation" class="pick-card" style="right: 60px;"
-            src="./../../assets/img/cards/{{ currentCard }}.png" alt="">
+            src="assets/img/cards/{{ currentCard }}.png" alt="">
     </div>
     <app-game-infos [card]="currentCard" class="game-infos"></app-game-infos>
     <button mat-mini-fab color="primary" (click)="openDialog()" class="add-button">
